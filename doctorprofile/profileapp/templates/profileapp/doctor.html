@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Profile</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'profileapp/style.css' %}">
+</head>
+<body>
+    <div class="profile-card">
+        <img src="{% static 'profileapp/doctor.png' %}" alt="Doctor Image" class="profile-img">
+        <h1>{{ name }}</h1>
+        <p><strong>Specialization:</strong> {{ specialization }}</p>
+        <p><strong>Experience:</strong> {{ experience }}</p>
+        <p><strong>Hospital:</strong> {{ hospital }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Phone:</strong> {{ phone }}</p>
+    </div>
+</body>
+</html>
