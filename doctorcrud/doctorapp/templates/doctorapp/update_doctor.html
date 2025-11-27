@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Doctor</title>
+    <style>
+        body { font-family: Arial; background: #f7f9fc; text-align: center; }
+        form { background: white; width: 400px; margin: auto; padding: 20px; border-radius: 8px; }
+        input { width: 90%; padding: 8px; margin: 8px; }
+        button { background: #0077b6; color: white; padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; }
+        a { text-decoration: none; color: #0077b6; }
+    </style>
+</head>
+<body>
+    <h1>Update Doctor Details</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" value="{{ doctor.name }}" required><br>
+        <input type="text" name="specialization" value="{{ doctor.specialization }}" required><br>
+        <input type="email" name="email" value="{{ doctor.email }}" required><br>
+        <input type="text" name="phone" value="{{ doctor.phone }}" required><br>
+        <input type="number" name="experience" value="{{ doctor.experience }}" required><br>
+        <button type="submit">Save Changes</button>
+    </form>
+    <p><a href="/">⬅ Back to Doctor List</a></p>
+</body>
+</html>
