@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Registration</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'register/style.css' %}">
+    <script src="{% static 'register/validate.js' %}" defer></script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Patient Registration Form</h2>
+        <form id="patientForm" onsubmit="return validateForm()">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter full name">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter age">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email">
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter phone number">
+
+            <label for="disease">Disease/Concern:</label>
+            <input type="text" id="disease" name="disease" placeholder="Enter disease name">
+
+            <button type="submit">Register</button>
+        </form>
+        <p id="error-message"></p>
+    </div>
+</body>
+</html>
