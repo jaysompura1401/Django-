@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fa;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #0077b6;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #0077b6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Doctor List</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Specialization</th>
+            <th>Experience (Years)</th>
+            <th>Contact</th>
+        </tr>
+        {% for doc in doctors %}
+        <tr>
+            <td>{{ doc.name }}</td>
+            <td>{{ doc.specialization }}</td>
+            <td>{{ doc.experience }}</td>
+            <td>{{ doc.contact }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
